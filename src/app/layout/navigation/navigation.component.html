@@ -1,0 +1,29 @@
+<div class="h-100 d-flex flex-column text-center">
+	<nav class="flex-fill d-flex align-items-center justify-content-center">
+		<mat-list role="list">
+			<mat-list-item role="listitem" routerLink="/home">
+				<span class="h1 pointer cc-dark" routerLinkActive="active" (click)="closeNavigation()">
+                    HOME
+                </span>
+			</mat-list-item>
+
+			<mat-list-item role="listitem" class="my-5" routerLink="/projects" (click)="closeNavigation()">
+				<span class="h1 pointer cc-dark" routerLinkActive="active">
+                    PROJEKTY
+                </span>
+			</mat-list-item>
+
+			<mat-list-item role="listitem" routerLink="/contact" (click)="closeNavigation()">
+				<span class="h1 pointer cc-dark" routerLinkActive="active">
+                    KONTAKT
+                </span>
+			</mat-list-item>
+		</mat-list>
+	</nav>
+
+	<div class="d-flex align-items-center justify-content-center cb-dark py-4 pointer" (click)="closeNavigation()">
+		<span class="material-icons-outlined cc-accent">
+            arrow_back_ios_new
+        </span>
+	</div>
+</div>
