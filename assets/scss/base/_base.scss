@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #141414;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.active {
+    color: #ff4655 !important;
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+    background-color: transparent;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
+    justify-content: center;
+    padding: 0 !important;
+}
