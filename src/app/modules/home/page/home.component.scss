@@ -10,7 +10,31 @@ h2 {
 .fab,
 .far {
     border: 2px solid #333333;
+    background-color: #000000;
     border-radius: 50%;
+    padding: .6em .65em .6em .6em;
+}
+
+.ic-linkedin {
+    color: #ff4655;
+    transition: .2s all;
+
+    &:hover {
+        color: #0a66c2;
+    }
+}
+
+.ic-github {
+    color: #ff4655;
+    transition: .2s all;
+    
+    &:hover {
+        color: #cdd9e5;
+    }
+}
+
+.ic-envelope {
+    color: #ff4655;
 }
 
 @media (min-width: 768px) {
