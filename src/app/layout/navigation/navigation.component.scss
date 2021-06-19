@@ -1,0 +1,50 @@
+.test {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-image: url('../../../assets/images/test.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .1;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #18181870;
+    border-left: 2px solid #20202070;
+    border-right: 2px solid #20202070;
+    z-index: -1;
+}
+
+.fab,
+.far {
+    border: 2px solid #333333;
+    background-color: #000000;
+    border-radius: 50%;
+    padding: .6em .65em .6em .6em;
+}
+
+.ic-linkedin {
+    color: #ffffff;
+    transition: .2s all;
+
+    &:hover {
+        color: #0a66c2;
+    }
+}
+
+.ic-github {
+    color: #ffffff;
+    transition: .2s all;
+    
+    &:hover {
+        color: #cdd9e5;
+    }
+}
