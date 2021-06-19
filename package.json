@@ -22,6 +22,7 @@
 		"@angular/platform-browser-dynamic": "~9.1.11",
 		"@angular/router": "~9.1.11",
 		"@fortawesome/fontawesome-free": "^5.15.3",
+		"@lottiefiles/lottie-player": "^1.0.4",
 		"bootstrap": "^5.0.1",
 		"prettier": "^2.3.1",
 		"rxjs": "~6.5.4",
