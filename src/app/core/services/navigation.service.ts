@@ -5,6 +5,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 	providedIn: 'root',
 })
 export class NavigationService {
+    
 	/**
 	 * Navigation.
 	 * @memberof NavigationService
@@ -18,7 +19,7 @@ export class NavigationService {
 	 * @param {MatSidenav} navigation
 	 * @memberof NavigationService
 	 */
-	public setNavigation(navigation: MatSidenav) {
+	setNavigation(navigation: MatSidenav) {
 		this.navigation = navigation;
 	}
 
@@ -26,7 +27,7 @@ export class NavigationService {
 	 * Open navigation.
 	 * @memberof NavigationService
 	 */
-	public open() {
+	open() {
 		return this.navigation.open();
 	}
 
@@ -34,7 +35,7 @@ export class NavigationService {
 	 * Close navigation.
 	 * @memberof NavigationService
 	 */
-	public close() {
+	close() {
 		return this.navigation.close();
 	}
 
@@ -42,7 +43,7 @@ export class NavigationService {
      * Toggle navigation.
      * @memberof navigationService
      */
-    public toggle() {
+    toggle() {
 		return this.navigation.toggle();
 	}
 }

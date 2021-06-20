@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -27,6 +28,7 @@ import { HeaderComponent } from './layout/header/header.component';
 		BrowserAnimationsModule,
 		MatSidenavModule,
 		MatListModule,
+        HttpClientModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],

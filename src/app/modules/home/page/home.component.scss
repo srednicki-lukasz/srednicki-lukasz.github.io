@@ -35,6 +35,10 @@ h2 {
 
 .ic-envelope {
     color: #e0e0e0;
+
+    &:hover {
+        color: #ff4655;
+    }
 }
 
 @media (min-width: 768px) {
