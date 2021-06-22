@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 import { LayoutComponent } from './layout/layout.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -28,6 +29,7 @@ import { HeaderComponent } from './layout/header/header.component';
 		BrowserAnimationsModule,
 		MatSidenavModule,
 		MatListModule,
+        MatButtonModule,
         HttpClientModule
 	],
 	providers: [],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { NavigationService } from 'src/app/core/services/navigation.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { NavigationService } from 'src/app/core/services/navigation.service';
 	styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-	constructor(private navigationService: NavigationService) {}
+	constructor( private navigationService: NavigationService ) {}
 
 	ngOnInit(): void {}
 
@@ -15,7 +16,7 @@ export class HeaderComponent implements OnInit {
 	 * Open navigation.
 	 * @memberof HeaderComponent
 	 */
-	public openNavigation() {
+	openNavigation() {
 		this.navigationService.open();
 	}
 }
