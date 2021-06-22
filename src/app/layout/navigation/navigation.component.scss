@@ -1,50 +1,55 @@
-.test {
+.background {
     height: 100%;
     width: 100%;
-    position: fixed;
-    background-image: url('../../../assets/images/test.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .02;
+    background-image: url('/assets/images/menu.png');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .1;
-    z-index: -1;
+    background-size: contain;
+    visibility: hidden;
 }
 
-.overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #18181870;
-    border-left: 2px solid #20202070;
-    border-right: 2px solid #20202070;
-    z-index: -1;
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 10px;
+    margin-right: -10px;
 }
 
-.fab,
-.far {
-    border: 2px solid #333333;
-    background-color: #000000;
-    border-radius: 50%;
-    padding: .8em;
-}
-
-.ic-linkedin {
-    color: #e0e0e0;
+button[mat-button] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    height: 2em;
+    letter-spacing: 10px;
     transition: .2s all;
 
     &:hover {
-        color: #0a66c2;
+        color: #ffffff;
     }
 }
 
-.ic-github {
-    color: #e0e0e0;
-    transition: .2s all;
+.material-icons-outlined {
+    line-height: unset;
+}
+
+@media (min-width: 768px) {
+    button[mat-button] {
+        font-size: 3em;
+        height: 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    button[mat-button] {
+        font-size: 4em;
+        height: 3em;
+    }
     
-    &:hover {
-        color: #cdd9e5;
+    .background {
+        visibility: visible;
     }
 }
+
+@media (min-width: 1280px) {}

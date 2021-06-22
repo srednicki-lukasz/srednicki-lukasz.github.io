@@ -7,10 +7,7 @@ import { NavigationService } from 'src/app/core/services/navigation.service';
 	styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent implements OnInit {
-
-	constructor(
-        private navigationService: NavigationService
-    ) {}
+	constructor( private navigationService: NavigationService ) {}
 
 	ngOnInit(): void {}
 
@@ -18,7 +15,7 @@ export class NavigationComponent implements OnInit {
 	 * Open navigation.
 	 * @memberof NavigationComponent
 	 */
-	public openNavigation() {
+	openNavigation() {
 		this.navigationService.open();
 	}
 
@@ -26,7 +23,15 @@ export class NavigationComponent implements OnInit {
      * Close navigation.
      * @memberof NavigationComponent
      */
-    public closeNavigation() {
+    closeNavigation() {
         this.navigationService.close();
+    }
+
+    /**
+     * Close navigation with timeout.
+     * @memberof NavigationComponent
+     */
+    closeNavigationWithTimeout() {
+        setTimeout(() => this.navigationService.close(), 500);
     }
 }
