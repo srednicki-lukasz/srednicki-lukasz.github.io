@@ -1,0 +1,17 @@
+.mat-list-base {
+    padding: 0 !important;
+    line-height: 10em !important;
+
+    .mat-list-option {
+        height: unset !important;
+    }
+
+    .mat-list-item {
+        height: unset !important;
+
+        .mat-list-item-content {
+            justify-content: center !important;
+            padding: 0 !important;
+        }
+    }
+}
