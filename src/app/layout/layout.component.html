@@ -5,14 +5,16 @@
 	</mat-drawer>
 
 	<!-- Content -->
-	<mat-drawer-content class="d-flex flex-column">
-		<header>
-			<app-header></app-header>
-		</header>
+	<mat-drawer-content>
+        <div class="h-100 d-flex flex-column">
+            <header>
+                <app-header></app-header>
+            </header>
 
-		<main class="flex-fill">
-			<router-outlet></router-outlet>
-		</main>
+            <main class="flex-fill">
+                <router-outlet></router-outlet>
+            </main>
+        </div>
 
 		<footer>
 			<app-footer></app-footer>
