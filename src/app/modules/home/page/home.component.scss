@@ -1,10 +1,21 @@
 h1 {
-    font-size: 2em;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    margin-right: -4px;
 }
 
 h2 {
-    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 4px;
+    margin-right: -4px;
+}
+
+.line-text {
+    font-family: 'Saira Condensed', sans-serif;
 }
 
 .fab,
@@ -15,58 +26,50 @@ h2 {
     padding: .8em;
 }
 
-.ic-linkedin {
-    color: #e0e0e0;
-    transition: .2s all;
-
-    &:hover {
-        color: #0a66c2;
-    }
-}
-
-.ic-github {
-    color: #e0e0e0;
-    transition: .2s all;
-    
-    &:hover {
-        color: #cdd9e5;
-    }
-}
-
-.ic-envelope {
-    color: #e0e0e0;
-
-    &:hover {
-        color: #ff4655;
-    }
-}
-
 @media (min-width: 768px) {
     h1 {
-        font-size: 4em;
+        font-size: 4.5em;
     }
     
     h2 {
-        font-size: 3.3em;
+        font-size: 3em;
     }
 }
 
 @media (min-width: 1024px) {
     h1 {
-        font-size: 5em;
+        font-size: 6.5em;
     }
     
     h2 {
-        font-size: 4.3em;
+        font-size: 5em;
     }
 }
 
-@media (min-width: 1280px) {
-    h1 {
-        font-size: 6em;
-    }
+@media (min-width: 1280px) {}
+
+// .ic-linkedin {
+//     color: #e0e0e0;
+//     transition: .2s all;
+
+//     &:hover {
+//         color: #0a66c2;
+//     }
+// }
+
+// .ic-github {
+//     color: #e0e0e0;
+//     transition: .2s all;
     
-    h2 {
-        font-size: 5.3em;
-    }
-}
+//     &:hover {
+//         color: #cdd9e5;
+//     }
+// }
+
+// .ic-envelope {
+//     color: #e0e0e0;
+
+//     &:hover {
+//         color: #ff4655;
+//     }
+// }
