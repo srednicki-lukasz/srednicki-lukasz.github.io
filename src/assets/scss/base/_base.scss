@@ -10,6 +10,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: #141414;
+    ::-webkit-scrollbar { display: none }
 }
 
 a {
