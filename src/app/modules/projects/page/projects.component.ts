@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
+import { ProjectsService } from 'src/app/core/services/projects.service';
+
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-
-import { ProjectsService } from 'src/app/core/services/projects.service';
 
 @Component({
 	selector: 'app-projects',
@@ -23,9 +23,21 @@ export class ProjectsComponent implements OnInit {
      * Table data source.
      * @memberof ProjectsComponent
      */
-    public dataSource: any;
+    public tableDataSource: any;
 
-	constructor(private projectsService: ProjectsService) {}
+    /**
+     * Table page size options.
+     * @memberof ProjectsComponent
+     */
+    public pageSizeOptions = [5, 10, 20];
+
+    /**
+     * Table columns.
+     * @memberof ProjectsComponent
+     */
+    public columns = ['index', 'name', 'link'];
+
+	constructor( private projectsService: ProjectsService ) {}
 
 	ngOnInit(): void {
         const excludedRepositories = [347375901, 370015322];
@@ -35,8 +47,9 @@ export class ProjectsComponent implements OnInit {
                 this.repositories = response;
                 this.repositories = this.repositories
                     .filter(repository => !excludedRepositories.includes(repository.id));
-                this.dataSource = new MatTableDataSource(this.repositories);
-                this.dataSource.paginator = this.paginator;
+
+                this.tableDataSource = new MatTableDataSource(this.repositories);
+                this.tableDataSource.paginator = this.paginator;
             });
     }
 }
