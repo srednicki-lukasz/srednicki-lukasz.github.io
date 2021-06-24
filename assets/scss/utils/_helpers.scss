@@ -2,22 +2,18 @@
     cursor: pointer;
 }
 
-.cc-accent {
+.custom-color-accent {
     color: #ff4655;
 }
 
-.cb-accent {
+.custom-color-dark {
+    color: #505050;
+}
+
+.custom-background-accent {
     background-color: #ff4655;
 }
 
-cc-dark-secondary {
-    color: #202020;
-}
-
-.cc-dark {
-    color: #333333;
-}
-
-.cb-dark {
+.custom-background-dark {
     background-color: #333333;
 }
