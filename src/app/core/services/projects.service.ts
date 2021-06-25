@@ -13,7 +13,7 @@ export class ProjectsService {
      */
     private repositories: string = 'https://api.github.com/users/srednicki-lukasz/repos?sort=updated';
 
-    constructor(private http: HttpClient) { }
+    constructor( private http: HttpClient ) { }
 
     /**
      * Get repositories.

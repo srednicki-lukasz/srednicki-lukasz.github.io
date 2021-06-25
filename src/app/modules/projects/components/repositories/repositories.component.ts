@@ -49,7 +49,6 @@ export class RepositoriesComponent implements OnInit {
                     .filter(repository => !excludedRepositories.includes(repository.id));
 
                 this.dataSource = new MatTableDataSource(this.repositories);
-                this.dataSource.paginator = this.paginator;
             });
     }
 
