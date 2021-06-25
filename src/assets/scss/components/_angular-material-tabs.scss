@@ -1,0 +1,19 @@
+.mat-tab-body-wrapper {
+    height: 100% !important;
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+    display: none !important;
+}
+
+.mat-tab-label {
+    color: #888888 !important;
+}
+
+.mat-tab-label-active {
+    color: #ffffff !important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #ff4655 !important;
+}

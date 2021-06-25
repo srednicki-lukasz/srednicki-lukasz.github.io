@@ -1,0 +1,21 @@
+.table-container {
+    overflow: auto;
+
+    a {
+        color: #ff4655;
+    }
+
+    .mat-column-link,
+    .mat-column-index {
+        width: 0;
+    }
+
+    th,
+    td {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .index {
+        font-family: 'Saira Condensed', sans-serif;
+    }
+}

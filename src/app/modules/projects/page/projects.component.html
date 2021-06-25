@@ -1,36 +1,15 @@
-<div class="h-100 d-flex flex-column">
-    <div class="table-container flex-fill">
-        <table mat-table [dataSource]="tableDataSource" class="w-100 bg-transparent">
-            <ng-container matColumnDef="index">
-                <th mat-header-cell *matHeaderCellDef class="text-center">No.</th>
-                <td mat-cell *matCellDef="let item; let i = index" class="index text-center custom-color-accent">
-                    <b>{{ (paginator.pageIndex * paginator.pageSize) + (i + 1) }}</b>
-                </td>
-            </ng-container>
+<mat-tab-group mat-align-tabs="center" mat-stretch-tabs class="h-100">
+    <mat-tab>
+        <ng-template matTabLabel>
+            <span class="material-icons-outlined" title="Repozytoria">format_list_numbered</span>
+        </ng-template>
+        <app-repositories></app-repositories>
+    </mat-tab>
 
-            <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef class="px-4">Name</th>
-                <td mat-cell *matCellDef="let item" class="px-4">
-                    <p class="m-0">{{ item.name }}</p>
-                    <small class="text-muted"><b>{{ item.description || 'Brak opisu.' }}</b></small>
-                </td>
-            </ng-container>
-
-            <ng-container matColumnDef="link">
-                <th mat-header-cell *matHeaderCellDef class="text-center">Link</th>
-                <td mat-cell *matCellDef="let item" class="text-center">
-                    <button mat-stroked-button>
-                        <a href="{{item.html_url}}" class="material-icons-outlined" target="_blank">
-                            code
-                        </a>
-                    </button>
-                </td>
-            </ng-container>
-
-            <tr mat-header-row *matHeaderRowDef="columns"></tr>
-            <tr mat-row *matRowDef="let row; columns: columns"></tr>
-        </table>
-    </div>
-
-    <mat-paginator #paginator pageSize="10" [pageSizeOptions]="pageSizeOptions" showFirstLastButtons class="bg-transparent"></mat-paginator>
-</div>
+    <mat-tab class="h-100">
+        <ng-template matTabLabel>
+            <span class="material-icons-outlined" title="Certyfikaty">checklist</span>
+        </ng-template>
+        <app-certificates></app-certificates>
+    </mat-tab>
+</mat-tab-group>
