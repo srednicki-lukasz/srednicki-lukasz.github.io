@@ -505,7 +505,7 @@ class NavigationComponent {
     }
 }
 NavigationComponent.ɵfac = function NavigationComponent_Factory(t) { return new (t || NavigationComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_core_services_navigation_service__WEBPACK_IMPORTED_MODULE_1__["NavigationService"])); };
-NavigationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavigationComponent, selectors: [["app-navigation"]], decls: 17, vars: 0, consts: [[1, "h-100", "d-flex", "flex-column", "pb-2"], [1, "background"], [1, "flex-fill", "d-flex", "flex-column", "justify-content-center"], ["routerLink", "/home"], ["mat-button", "", "routerLinkActive", "active", 1, "custom-color-dark", "w-100", "text-center", "p-0", "rounded-0", "pointer", 3, "click"], ["routerLink", "/projects", 1, "my-5"], ["mat-button", "", "routerLinkActive", "active", 1, "custom-color-dark", "w-100", "p-0", "rounded-0", "pointer", 3, "click"], ["routerLink", "/contact"], ["mat-button", "", "routerLinkActive", "active", "disabled", "", 1, "custom-color-dark", "w-100", "p-0", "rounded-0", "pointer", 3, "click"], ["mat-icon-button", "", 1, "custom-color-accent", "pointer", 3, "click"], [1, "material-icons-outlined"]], template: function NavigationComponent_Template(rf, ctx) { if (rf & 1) {
+NavigationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavigationComponent, selectors: [["app-navigation"]], decls: 14, vars: 0, consts: [[1, "h-100", "d-flex", "flex-column", "pb-2"], [1, "background"], [1, "flex-fill", "d-flex", "flex-column", "justify-content-center"], ["routerLink", "/home"], ["mat-button", "", "routerLinkActive", "active", 1, "custom-color-dark", "w-100", "text-center", "p-0", "rounded-0", "pointer", 3, "click"], ["routerLink", "/projects", 1, "my-5"], ["mat-button", "", "routerLinkActive", "active", 1, "custom-color-dark", "w-100", "p-0", "rounded-0", "pointer", 3, "click"], ["mat-icon-button", "", 1, "custom-color-accent", "pointer", 3, "click"], [1, "material-icons-outlined"]], template: function NavigationComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "nav", 2);
@@ -522,19 +522,13 @@ NavigationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " PROJEKTY ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-list-item", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavigationComponent_Template_button_click_11_listener() { return ctx.closeNavigationWithTimeout(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " KONTAKT ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavigationComponent_Template_button_click_14_listener() { return ctx.closeNavigation(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "span", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "close");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavigationComponent_Template_button_click_11_listener() { return ctx.closeNavigation(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "span", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "close");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();

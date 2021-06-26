@@ -17635,10 +17635,8 @@ class RepositoriesComponent {
             this.repositories = this.repositories
                 .filter(repository => !excludedRepositories.includes(repository.id));
             this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.repositories);
+            this.dataSource.paginator = this.paginator;
         });
-    }
-    ngAfterViewInit() {
-        this.dataSource.paginator = this.paginator;
     }
 }
 RepositoriesComponent.ɵfac = function RepositoriesComponent_Factory(t) { return new (t || RepositoriesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_core_services_projects_service__WEBPACK_IMPORTED_MODULE_3__["ProjectsService"])); };

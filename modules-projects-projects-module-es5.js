@@ -28672,12 +28672,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return !excludedRepositories.includes(repository.id);
             });
             _this99.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](_this99.repositories);
+            _this99.dataSource.paginator = _this99.paginator;
           });
-        }
-      }, {
-        key: "ngAfterViewInit",
-        value: function ngAfterViewInit() {
-          this.dataSource.paginator = this.paginator;
         }
       }]);
 
