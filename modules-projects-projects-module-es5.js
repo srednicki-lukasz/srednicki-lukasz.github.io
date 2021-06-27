@@ -28213,11 +28213,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 21);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 22);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 23);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " link ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 24);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " link ");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -28229,7 +28233,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var item_r12 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", item_r12.credentialUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
       }
@@ -28237,13 +28241,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function CertificatesComponent_tr_12_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 25);
       }
     }
 
     function CertificatesComponent_tr_13_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 26);
       }
     }
 
@@ -28371,7 +28375,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 16,
       vars: 4,
-      consts: [[1, "h-100", "d-flex", "flex-column"], [1, "table-container", "flex-fill"], ["mat-table", "", 1, "w-100", "bg-transparent", 3, "dataSource"], ["matColumnDef", "index"], ["mat-header-cell", "", "class", "text-center", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "index text-center custom-color-accent", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "class", "px-4", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "px-4", 4, "matCellDef"], ["matColumnDef", "link"], ["mat-cell", "", "class", "text-center", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["pageSize", "10", "showFirstLastButtons", "", 1, "bg-transparent", 3, "pageSizeOptions"], ["paginator", ""], ["mat-header-cell", "", 1, "text-center"], ["mat-cell", "", 1, "index", "text-center", "custom-color-accent"], ["mat-header-cell", "", 1, "px-4"], ["mat-cell", "", 1, "px-4"], [1, "m-0"], [1, "text-muted"], ["mat-cell", "", 1, "text-center"], ["mat-stroked-button", ""], ["target", "_blank", 1, "material-icons-outlined", 3, "href"], ["mat-header-row", ""], ["mat-row", ""]],
+      consts: [[1, "h-100", "d-flex", "flex-column"], [1, "table-container", "flex-fill"], ["mat-table", "", 1, "w-100", "bg-transparent", 3, "dataSource"], ["matColumnDef", "index"], ["mat-header-cell", "", "class", "text-center", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "index text-center custom-color-accent", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "class", "px-4", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "px-4", 4, "matCellDef"], ["matColumnDef", "link"], ["mat-cell", "", "class", "text-center", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["pageSize", "10", "showFirstLastButtons", "", 1, "bg-transparent", 3, "pageSizeOptions"], ["paginator", ""], ["mat-header-cell", "", 1, "text-center"], ["mat-cell", "", 1, "index", "text-center", "custom-color-accent"], ["mat-header-cell", "", 1, "px-4"], ["mat-cell", "", 1, "px-4"], [1, "m-0"], [1, "text-muted"], ["mat-cell", "", 1, "text-center"], ["target", "_blank", 3, "href"], ["mat-stroked-button", ""], [1, "material-icons-outlined"], ["mat-header-row", ""], ["mat-row", ""]],
       template: function CertificatesComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -28400,7 +28404,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, CertificatesComponent_th_10_Template, 2, 0, "th", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, CertificatesComponent_td_11_Template, 4, 1, "td", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, CertificatesComponent_td_11_Template, 5, 1, "td", 10);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
@@ -28607,11 +28611,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 21);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "button", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 22);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "button", 23);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " link ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 24);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " link ");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -28623,7 +28631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var item_r12 = ctx.$implicit;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", item_r12.html_url, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
       }
@@ -28631,13 +28639,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function RepositoriesComponent_tr_12_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 25);
       }
     }
 
     function RepositoriesComponent_tr_13_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 26);
       }
     }
 
@@ -28700,7 +28708,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 16,
       vars: 4,
-      consts: [[1, "h-100", "d-flex", "flex-column"], [1, "table-container", "flex-fill"], ["mat-table", "", 1, "w-100", "bg-transparent", 3, "dataSource"], ["matColumnDef", "index"], ["mat-header-cell", "", "class", "text-center", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "index text-center custom-color-accent", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "class", "px-4", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "px-4", 4, "matCellDef"], ["matColumnDef", "link"], ["mat-cell", "", "class", "text-center", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["pageSize", "10", "showFirstLastButtons", "", 1, "bg-transparent", 3, "pageSizeOptions"], ["paginator", ""], ["mat-header-cell", "", 1, "text-center"], ["mat-cell", "", 1, "index", "text-center", "custom-color-accent"], ["mat-header-cell", "", 1, "px-4"], ["mat-cell", "", 1, "px-4"], [1, "m-0"], [1, "text-muted"], ["mat-cell", "", 1, "text-center"], ["mat-stroked-button", ""], ["target", "_blank", 1, "material-icons-outlined", 3, "href"], ["mat-header-row", ""], ["mat-row", ""]],
+      consts: [[1, "h-100", "d-flex", "flex-column"], [1, "table-container", "flex-fill"], ["mat-table", "", 1, "w-100", "bg-transparent", 3, "dataSource"], ["matColumnDef", "index"], ["mat-header-cell", "", "class", "text-center", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "index text-center custom-color-accent", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "class", "px-4", 4, "matHeaderCellDef"], ["mat-cell", "", "class", "px-4", 4, "matCellDef"], ["matColumnDef", "link"], ["mat-cell", "", "class", "text-center", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["pageSize", "10", "showFirstLastButtons", "", 1, "bg-transparent", 3, "pageSizeOptions"], ["paginator", ""], ["mat-header-cell", "", 1, "text-center"], ["mat-cell", "", 1, "index", "text-center", "custom-color-accent"], ["mat-header-cell", "", 1, "px-4"], ["mat-cell", "", 1, "px-4"], [1, "m-0"], [1, "text-muted"], ["mat-cell", "", 1, "text-center"], ["target", "_blank", 3, "href"], ["mat-stroked-button", ""], [1, "material-icons-outlined"], ["mat-header-row", ""], ["mat-row", ""]],
       template: function RepositoriesComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -28729,7 +28737,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, RepositoriesComponent_th_10_Template, 2, 0, "th", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, RepositoriesComponent_td_11_Template, 4, 1, "td", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, RepositoriesComponent_td_11_Template, 5, 1, "td", 10);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
