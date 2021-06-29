@@ -25,7 +25,7 @@ const certificates: Certificate[] = [
     { id: 'UC-2298c41f-3c30-4f7d-8f54-25143162ef33', name: 'CSS3', issuingOrganization: 'Udemy', credentialUrl: 'https://ude.my/UC-2298c41f-3c30-4f7d-8f54-25143162ef33' },
     { id: 'UC-3986d56e-92c6-4edb-be84-5986e8a7ce32', name: 'HTML5', issuingOrganization: 'Udemy', credentialUrl: 'https://ude.my/UC-3986d56e-92c6-4edb-be84-5986e8a7ce32' },
     { id: 'UC-H0LZ1CUZ', name: 'Angular 2+', issuingOrganization: 'Udemy', credentialUrl: 'https://ude.my/UC-H0LZ1CUZ' },
-    { id: 'UC-1KI6MOIN', name: 'Angular', issuingOrganization: 'Udemy', credentialUrl: 'https://ude.my/UC-1KI6MOIN' },
+    { id: 'UC-1KI6MOIN', name: 'Angular 5', issuingOrganization: 'Udemy', credentialUrl: 'https://ude.my/UC-1KI6MOIN' },
 ];
 
 @Component({
