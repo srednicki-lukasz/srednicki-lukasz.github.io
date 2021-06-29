@@ -17439,6 +17439,7 @@ function CertificatesComponent_tr_13_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "tr", 26);
 } }
 const certificates = [
+    { id: '21939382-1060', name: 'SQL', issuingOrganization: 'SoloLearn', credentialUrl: 'https://www.sololearn.com/certificates/course/en/21939382/1060/landscape/png' },
     { id: '21939382-1024', name: 'JavaScript', issuingOrganization: 'SoloLearn', credentialUrl: 'https://www.sololearn.com/certificates/course/en/21939382/1024/landscape/png' },
     { id: '1097-21939382', name: 'React + Redux', issuingOrganization: 'SoloLearn', credentialUrl: 'https://www.sololearn.com/Certificate/1097-21939382/pdf' },
     { id: '1162-21939382', name: 'Responsive Web Design', issuingOrganization: 'SoloLearn', credentialUrl: 'https://www.sololearn.com/Certificate/1162-21939382/pdf' },

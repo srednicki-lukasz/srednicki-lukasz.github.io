@@ -28252,6 +28252,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     var certificates = [{
+      id: '21939382-1060',
+      name: 'SQL',
+      issuingOrganization: 'SoloLearn',
+      credentialUrl: 'https://www.sololearn.com/certificates/course/en/21939382/1060/landscape/png'
+    }, {
       id: '21939382-1024',
       name: 'JavaScript',
       issuingOrganization: 'SoloLearn',
