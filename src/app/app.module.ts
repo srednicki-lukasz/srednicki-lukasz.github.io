@@ -15,6 +15,11 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { HeaderComponent } from './layout/header/header.component';
 
+import { HomeModule } from './modules/home/home.module';
+import { ProjectsModule } from './modules/projects/projects.module';
+import { ContactModule } from './modules/contact/contact.module';
+import { CoreModule } from './core/core.module';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -30,7 +35,11 @@ import { HeaderComponent } from './layout/header/header.component';
 		MatSidenavModule,
 		MatListModule,
         MatButtonModule,
-        HttpClientModule
+        HttpClientModule,
+        HomeModule,
+        ProjectsModule,
+        ContactModule,
+        CoreModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],
