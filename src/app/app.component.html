@@ -1,5 +1,10 @@
+@if (isPortrait()) {
 <sidebar />
-
 <main [@routeAnimations]="prepareRoute(outlet)">
   <router-outlet #outlet="outlet" />
 </main>
+} @else {
+<div class="h-100 w-100 d-flex align-items-center justify-content-center">
+  <p>Please rotate your device</p>
+</div>
+}
