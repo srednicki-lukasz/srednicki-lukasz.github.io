@@ -1,0 +1,60 @@
+<div class="h-100 card">
+  <div class="card-body d-flex flex-column align-items-center justify-content-between">
+    <section class="flex-fill container-fluid p-lg-5">
+      <div class="h-100 row">
+        <div class="text-section col-12 col-lg-6">
+          <div class="d-lg-none">
+            <h1 class="text-center">
+              {{ authorInfo.name }}
+              <br />
+              {{ authorInfo.surname }}
+            </h1>
+
+            <hr class="w-100 text-secondary" />
+
+            <h6 class="text-center">{{ authorInfo.title }}</h6>
+          </div>
+
+          <div class="d-none d-lg-block">
+            <h1>
+              <span class="ps-1">{{ authorInfo.name }}</span>
+              <br />
+              {{ authorInfo.surname }}
+            </h1>
+
+            <hr class="w-100 text-secondary" />
+
+            <h6>
+              <span class="accent">>_</span>
+              {{ authorInfo.title }}
+            </h6>
+          </div>
+        </div>
+
+        <div class="image-section d-none d-lg-block col-12 col-lg-6">
+          <img src="balloon.svg" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <hr class="w-100 text-secondary" />
+
+    <div class="w-100 carousel">
+      <div class="d-flex align-items-center">
+        <div class="carousel-track">
+          <div class="w-100 d-inline-block carousel-items">
+            @for (logo of carouselItems; track $index) {
+            <img height="50" [src]="logo.src" [alt]="logo.alt" />
+            }
+          </div>
+
+          <div class="w-100 d-inline-block carousel-items">
+            @for (logo of carouselItems; track $index) {
+            <img height="50" [src]="logo.src" [alt]="logo.alt" />
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

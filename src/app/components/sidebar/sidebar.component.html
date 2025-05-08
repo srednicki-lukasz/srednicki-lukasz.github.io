@@ -1,0 +1,47 @@
+<aside class="h-100 d-flex flex-column align-items-center justify-content-between py-4 ps-3 pe-2">
+  <nav>
+    <ul class="d-flex flex-column m-0 p-0">
+      <li>
+        <a
+          class="route-inactive"
+          title="Home"
+          routerLink="/"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i class="bi bi-person h5 m-0"></i>
+        </a>
+      </li>
+
+      <li>
+        <a class="route-inactive" title="Projects" routerLink="/projects" routerLinkActive="route-active">
+          <i class="bi bi-braces h5 m-0"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <small class="text-center text-secondary" [innerHTML]="copyrightNotice()"></small>
+
+  <footer>
+    <ul class="d-flex flex-column m-0 p-0">
+      <li>
+        <a class="btn-link" target="_blank" [href]="socials.github.url" [title]="socials.github.name">
+          <i class="bi bi-github h5 m-0"></i>
+        </a>
+      </li>
+
+      <li>
+        <a class="btn-link" target="_blank" [href]="socials.linkedin.url" [title]="socials.linkedin.name">
+          <i class="bi bi-linkedin h5 m-0"></i>
+        </a>
+      </li>
+
+      <li>
+        <a class="btn-link" target="_blank" [href]="socials.mailto.url" [title]="socials.mailto.name">
+          <i class="bi bi-envelope-fill h5 m-0"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
+</aside>

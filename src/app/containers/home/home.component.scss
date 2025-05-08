@@ -1,0 +1,99 @@
+@import '../../../styles.scss';
+
+:host {
+  @include router-base;
+  padding: 12px;
+}
+
+.card {
+  color: var(--color);
+  overflow: hidden;
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--card-background);
+  background-image: url('../../../../public/texture.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  .text-section {
+    align-content: center;
+    line-height: 3rem;
+
+    h1 {
+      font-size: clamp(2em, 8vw, 12rem);
+    }
+
+    h6 {
+      font-size: clamp(1em, 2vw, 2rem);
+    }
+  }
+
+  .image-section {
+    align-content: center;
+
+    img {
+      animation: float 5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, var(--card-background), rgba(255, 255, 255, 0));
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, var(--card-background), rgba(255, 255, 255, 0));
+  }
+
+  .carousel-track {
+    white-space: nowrap;
+    animation: slide-carousel 40s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    .carousel-items > img {
+      width: calc(100% / 8);
+      padding: 0 30px;
+    }
+  }
+}
+
+@keyframes slide-carousel {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

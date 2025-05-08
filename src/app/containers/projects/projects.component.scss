@@ -1,0 +1,59 @@
+@import '../../../styles.scss';
+
+:host {
+  @include router-base;
+  padding: 12px 0 12px 12px;
+}
+
+.card {
+  color: var(--color);
+  overflow: hidden;
+  box-shadow: var(--card-box-shadow);
+  background-color: var(--card-background);
+  background-image: url('../../../../public/texture.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  .card-body {
+    overflow: hidden;
+
+    .scrollable-container {
+      overflow: hidden;
+      overflow-y: auto;
+
+      .table {
+        backdrop-filter: blur(4px);
+        background-color: #21252952;
+
+        .portfolio-repository {
+          background: rgba($color: #1b9c85, $alpha: 0.1);
+        }
+
+        td {
+          padding: 8px 16px;
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+
+  .bi-chevron-right {
+    opacity: 0;
+    display: inline-block;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .bi-chevron-right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

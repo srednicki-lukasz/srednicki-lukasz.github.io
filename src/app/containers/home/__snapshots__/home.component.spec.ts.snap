@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeComponent should match snapshot 1`] = `
+<home
+  authorInfo={[Function Object]}
+  carouselItems={[Function Array]}
+>
+  <div
+    class="h-100 card"
+  >
+    <div
+      class="card-body d-flex flex-column align-items-center justify-content-between"
+    >
+      <section
+        class="flex-fill container-fluid p-lg-5"
+      >
+        <div
+          class="h-100 row"
+        >
+          <div
+            class="text-section col-12 col-lg-6"
+          >
+            <div
+              class="d-lg-none"
+            >
+              <h1
+                class="text-center"
+              >
+                 Łukasz 
+                <br />
+                 Średnicki 
+              </h1>
+              <hr
+                class="w-100 text-secondary"
+              />
+              <h6
+                class="text-center"
+              >
+                Front-End Developer
+              </h6>
+            </div>
+            <div
+              class="d-none d-lg-block"
+            >
+              <h1>
+                <span
+                  class="ps-1"
+                >
+                  Łukasz
+                </span>
+                <br />
+                 Średnicki 
+              </h1>
+              <hr
+                class="w-100 text-secondary"
+              />
+              <h6>
+                <span
+                  class="accent"
+                >
+                  &gt;_
+                </span>
+                 Front-End Developer 
+              </h6>
+            </div>
+          </div>
+          <div
+            class="image-section d-none d-lg-block col-12 col-lg-6"
+          >
+            <img
+              alt=""
+              class="img-fluid"
+              src="balloon.svg"
+            />
+          </div>
+        </div>
+      </section>
+      <hr
+        class="w-100 text-secondary"
+      />
+      <div
+        class="w-100 carousel"
+      >
+        <div
+          class="d-flex align-items-center"
+        >
+          <div
+            class="carousel-track"
+          >
+            <div
+              class="w-100 d-inline-block carousel-items"
+            >
+              <img
+                alt="HTML logo"
+                height="50"
+                src="carousel-images/html.svg"
+              />
+              <img
+                alt="CSS logo"
+                height="50"
+                src="carousel-images/css.svg"
+              />
+              <img
+                alt="JavaScript logo"
+                height="50"
+                src="carousel-images/javascript.svg"
+              />
+              <img
+                alt="TypeScript logo"
+                height="50"
+                src="carousel-images/typescript.svg"
+              />
+              <img
+                alt="Angular logo"
+                height="50"
+                src="carousel-images/angular.svg"
+              />
+              <img
+                alt="NgRx logo"
+                height="50"
+                src="carousel-images/ngrx.svg"
+              />
+              <img
+                alt="RxJS logo"
+                height="50"
+                src="carousel-images/rxjs.svg"
+              />
+              <img
+                alt="Python logo"
+                height="50"
+                src="carousel-images/python.svg"
+              />
+            </div>
+            <div
+              class="w-100 d-inline-block carousel-items"
+            >
+              <img
+                alt="HTML logo"
+                height="50"
+                src="carousel-images/html.svg"
+              />
+              <img
+                alt="CSS logo"
+                height="50"
+                src="carousel-images/css.svg"
+              />
+              <img
+                alt="JavaScript logo"
+                height="50"
+                src="carousel-images/javascript.svg"
+              />
+              <img
+                alt="TypeScript logo"
+                height="50"
+                src="carousel-images/typescript.svg"
+              />
+              <img
+                alt="Angular logo"
+                height="50"
+                src="carousel-images/angular.svg"
+              />
+              <img
+                alt="NgRx logo"
+                height="50"
+                src="carousel-images/ngrx.svg"
+              />
+              <img
+                alt="RxJS logo"
+                height="50"
+                src="carousel-images/rxjs.svg"
+              />
+              <img
+                alt="Python logo"
+                height="50"
+                src="carousel-images/python.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</home>
+`;

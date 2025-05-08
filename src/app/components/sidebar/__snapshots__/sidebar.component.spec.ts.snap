@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidebarComponent should match snapshot 1`] = `
+<sidebar
+  copyrightNotice={[Function Function]}
+  socials={[Function Object]}
+>
+  <aside
+    class="h-100 d-flex flex-column align-items-center justify-content-between py-4 ps-3 pe-2"
+  >
+    <nav>
+      <ul
+        class="d-flex flex-column m-0 p-0"
+      >
+        <li>
+          <a
+            class="route-inactive"
+            href="/"
+            routerlink="/"
+            routerlinkactive="route-active"
+            title="Home"
+          >
+            <i
+              class="bi bi-person h5 m-0"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="route-inactive"
+            href="/projects"
+            routerlink="/projects"
+            routerlinkactive="route-active"
+            title="Projects"
+          >
+            <i
+              class="bi bi-braces h5 m-0"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <small
+      class="text-center text-secondary"
+    >
+      © 2025 Łukasz Średnicki
+      <br />
+      All rights reserved
+    </small>
+    <footer>
+      <ul
+        class="d-flex flex-column m-0 p-0"
+      >
+        <li>
+          <a
+            class="btn-link"
+            href="https://github.com/srednicki-lukasz"
+            target="_blank"
+            title="GitHub"
+          >
+            <i
+              class="bi bi-github h5 m-0"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn-link"
+            href="https://www.linkedin.com/in/lukasz-srednicki"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i
+              class="bi bi-linkedin h5 m-0"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn-link"
+            href="mailto:srednickilukasz.business@gmail.com"
+            target="_blank"
+            title="Email"
+          >
+            <i
+              class="bi bi-envelope-fill h5 m-0"
+            />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </aside>
+</sidebar>
+`;

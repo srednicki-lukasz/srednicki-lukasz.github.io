@@ -1,0 +1,10 @@
+aside {
+  > nav > ul,
+  > footer > ul {
+    gap: 2rem;
+  }
+
+  > small {
+    writing-mode: sideways-lr;
+  }
+}
