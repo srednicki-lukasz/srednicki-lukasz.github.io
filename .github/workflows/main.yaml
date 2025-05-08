@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 21
+          node-version: '24'
 
       - name: Install
         run: npm install
@@ -25,7 +28,9 @@ jobs:
         run: npm run build:prod
 
       - name: Deploy
-        run: npx angular-cli-ghpages --dir=dist/portfolio
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.PAGES_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/portfolio
+          publish_branch: gh-pages
+          keep_files: false
