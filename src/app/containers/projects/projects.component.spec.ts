@@ -4,11 +4,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { Repository } from '../../models/portfolio.models';
 import { PortfolioHttpService } from '../../store/portfolio-http.service';
-import { PortfolioStore } from '../../store/portfolio.store';
+import { configRepositoryId, portfolioRepositoryId, PortfolioStore } from '../../store/portfolio.store';
 import { createTestRepository } from '../../test/portfolio.test-data';
 import { ProjectsComponent } from './projects.component';
 
-const testRepositories = [createTestRepository(), createTestRepository(1)];
+const testRepositories = [
+  createTestRepository(1),
+  createTestRepository(configRepositoryId),
+  createTestRepository(portfolioRepositoryId),
+];
 
 describe('ProjectsComponent', () => {
   let spectator: Spectator<ProjectsComponent>;
@@ -54,8 +58,7 @@ describe('ProjectsComponent', () => {
     await Promise.resolve();
 
     expect(spectator.component.isLoading()).toBeFalsy();
-    expect(spectator.component.portfolioRepository()).toEqual(testRepositories[0]);
-    expect(spectator.component.repositoriesWithoutPortfolioRepository()).toEqual([testRepositories[1]]);
+    expect(spectator.component.repositories()).toEqual(testRepositories);
 
     spectator.detectChanges();
 

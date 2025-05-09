@@ -1,14 +1,14 @@
 import { computed, inject } from '@angular/core';
 import { patchState, signalStore, withComputed, withMethods, withState } from '@ngrx/signals';
-import { Repository } from '../models/portfolio.models';
+import { Repository, RepositoryLanguages } from '../models/portfolio.models';
 import { PortfolioHttpService } from './portfolio-http.service';
 
-const configRepositoryId = 347375901;
-const portfolioRepositoryId = 978832136;
+export const configRepositoryId = 347375901;
+export const portfolioRepositoryId = 978832136;
 
 type PortfolioState = {
   isLoading: boolean;
-  repositories: Repository[];
+  repositories: (Repository & { languages: RepositoryLanguages })[];
 };
 
 const initialState: PortfolioState = {
@@ -19,12 +19,10 @@ const initialState: PortfolioState = {
 export const PortfolioStore = signalStore(
   withState(initialState),
   withComputed(({ repositories }) => ({
-    portfolioRepository: computed((): Repository => {
-      return repositories().find(({ id }) => id === portfolioRepositoryId)!;
-    }),
-    repositoriesWithoutPortfolioRepository: computed((): Repository[] => {
-      return repositories().filter(({ id }) => id !== configRepositoryId && id !== portfolioRepositoryId);
-    }),
+    computedRepositories: computed(() => [
+      ...repositories().filter(({ id }) => id === portfolioRepositoryId),
+      ...repositories().filter(({ id }) => id !== portfolioRepositoryId),
+    ]),
   })),
   withMethods((store, portfolioHttpService = inject(PortfolioHttpService)) => ({
     async fetchRepositories(): Promise<void> {
@@ -32,7 +30,16 @@ export const PortfolioStore = signalStore(
       patchState(store, { isLoading: true });
 
       const repositories = await portfolioHttpService.fetchRepositories();
-      patchState(store, { isLoading: false, repositories });
+      const repositoriesWithoutConfigRepository = repositories.filter(({ id }) => id !== configRepositoryId);
+
+      const repositoriesWithLanguages = await Promise.all(
+        repositoriesWithoutConfigRepository.map(async repository => {
+          const languages = await portfolioHttpService.fetchRepositoryLanguages(repository.name);
+          return { ...repository, languages };
+        })
+      );
+
+      patchState(store, { isLoading: false, repositories: repositoriesWithLanguages });
     },
   }))
 );

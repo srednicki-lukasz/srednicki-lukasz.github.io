@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, OnInit } from '@angular/core';
 import { Repository } from '../../models/portfolio.models';
-import { PortfolioStore } from '../../store/portfolio.store';
+import { portfolioRepositoryId, PortfolioStore } from '../../store/portfolio.store';
 
 @Component({
   selector: 'projects',
@@ -11,9 +11,10 @@ import { PortfolioStore } from '../../store/portfolio.store';
 export class ProjectsComponent implements OnInit {
   private readonly store = inject(PortfolioStore);
 
+  readonly portfolioRepositoryId = portfolioRepositoryId;
+
   isLoading = computed(this.computeIsLoading.bind(this));
-  portfolioRepository = computed(this.computePortfolioRepository.bind(this));
-  repositoriesWithoutPortfolioRepository = computed(this.computeRepositoriesWithoutPortfolioRepository.bind(this));
+  repositories = computed(this.computeRepositories.bind(this));
 
   public ngOnInit(): void {
     this.store.fetchRepositories();
@@ -23,11 +24,10 @@ export class ProjectsComponent implements OnInit {
     return store.isLoading();
   }
 
-  private computePortfolioRepository(store = this.store): Repository {
-    return store.portfolioRepository();
-  }
-
-  private computeRepositoriesWithoutPortfolioRepository(store = this.store): Repository[] {
-    return store.repositoriesWithoutPortfolioRepository();
+  private computeRepositories(store = this.store): (Repository & { languages: string })[] {
+    return store.computedRepositories().map(computedRepository => ({
+      ...computedRepository,
+      languages: Object.keys(computedRepository.languages).join(', '),
+    }));
   }
 }

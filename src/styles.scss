@@ -66,6 +66,14 @@ ul {
   }
 }
 
+.primary {
+  color: var(--color) !important;
+}
+
+.accent {
+  color: var(--accent) !important;
+}
+
 .btn-link {
   display: flex;
   align-items: center;
@@ -78,8 +86,4 @@ ul {
     transition: 0.3s;
     background: rgba($color: #ffffff, $alpha: 0.2);
   }
-}
-
-.accent {
-  color: #1b9c85 !important;
 }

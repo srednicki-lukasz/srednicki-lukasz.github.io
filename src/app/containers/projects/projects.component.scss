@@ -18,21 +18,21 @@
   .card-body {
     overflow: hidden;
 
-    .scrollable-container {
-      overflow: hidden;
+    ul {
       overflow-y: auto;
 
-      .table {
+      li {
+        color: var(--color);
         backdrop-filter: blur(4px);
-        background-color: #21252952;
+        border-bottom: 1px solid #171717 !important;
 
-        .portfolio-repository {
-          background: rgba($color: #1b9c85, $alpha: 0.1);
+        h5 {
+          font-size: clamp(0.8rem, 2vw, 1rem);
+          font-weight: 400;
         }
 
-        td {
-          padding: 8px 16px;
-          background: transparent;
+        small {
+          font-size: clamp(0.7rem, 2vw, 0.85rem);
         }
       }
     }

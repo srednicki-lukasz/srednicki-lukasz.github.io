@@ -3,7 +3,7 @@ import { Repository } from './../models/portfolio.models';
 export const createTestRepository = (id = 978832136): Repository => ({
   id,
   node_id: 'R_kgDOOlfLCA',
-  name: 'srednicki-lukasz.github.io',
+  name: `Repository id: ${id}`,
   full_name: 'srednicki-lukasz/srednicki-lukasz.github.io',
   private: false,
   owner: {

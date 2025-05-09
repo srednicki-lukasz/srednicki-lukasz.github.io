@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { Repository } from '../models/portfolio.models';
+import { Repository, RepositoryLanguages } from '../models/portfolio.models';
 
 @Injectable()
 export class PortfolioHttpService {
@@ -10,5 +10,9 @@ export class PortfolioHttpService {
 
   public fetchRepositories(): Promise<Repository[]> {
     return firstValueFrom(this.httpClient.get<Repository[]>(`${this.origin}/users/srednicki-lukasz/repos`));
+  }
+
+  public fetchRepositoryLanguages(repository: string): Promise<RepositoryLanguages> {
+    return firstValueFrom(this.httpClient.get<any>(`${this.origin}/repos/srednicki-lukasz/${repository}/languages`));
   }
 }

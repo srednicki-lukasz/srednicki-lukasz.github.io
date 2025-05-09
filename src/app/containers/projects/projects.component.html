@@ -4,40 +4,29 @@
     <div class="spinner-border text-light" role="status">
       <span class="sr-only"></span>
     </div>
+    } @else { @if (!repositories().length) {
+    <div class="h-100 w-100 d-flex align-items-center justify-content-center">Nothing to see here</div>
     } @else {
-    <div class="h-100 w-100 scrollable-container">
-      <table class="table table-dark border-muted">
-        <tbody>
-          <tr class="portfolio-repository text-start">
-            <td>
-              <p class="p-0 m-0">{{ portfolioRepository().name }}</p>
-              <small style="font-size: 0.8rem" class="accent">>_ {{ portfolioRepository().description || '—' }}</small>
-            </td>
-            <td class="align-middle text-center pe-0" style="width: 70px">
-              <a [href]="portfolioRepository().html_url" target="_blank" class="btn text-light" title="GitHub">
-                <span class="bi-github"></span>
-                <span class="bi-chevron-right small ms-2"></span>
-              </a>
-            </td>
-          </tr>
-
-          @for (repository of repositoriesWithoutPortfolioRepository(); track repository.id) {
-          <tr class="text-start">
-            <td>
-              <p class="p-0 m-0">{{ repository.name }}</p>
-              <small style="font-size: 0.8rem" class="accent">>_ {{ repository.description || '—' }}</small>
-            </td>
-            <td class="align-middle text-center pe-0" style="width: 70px">
-              <a [href]="repository.html_url" target="_blank" class="btn text-light" title="GitHub">
-                <span class="bi-github"></span>
-                <span class="bi-chevron-right small ms-2"></span>
-              </a>
-            </td>
-          </tr>
-          }
-        </tbody>
-      </table>
-    </div>
-    }
+    <ul class="h-100 w-100 list-group">
+      @for (repository of repositories(); track $index) {
+      <li class="list-group-item list-group-item-action rounded-0 border-0 bg-transparent">
+        <div class="w-100 d-flex align-items-center justify-content-between">
+          <h5 class="m-0">
+            <small>{{ $index + 1 }}.</small>
+            {{ repository.name }}
+          </h5>
+          <a [href]="repository.html_url" target="_blank" class="ms-3" title="GitHub">
+            <span class="bi-github"></span>
+          </a>
+        </div>
+        @if (repository.id === portfolioRepositoryId) {
+        <small class="accent">>_ {{ repository.description || '—' }}</small>
+        } @else {
+        <small class="text-secondary">>_ {{ repository.description || '—' }} ({{ repository.languages }})</small>
+        }
+      </li>
+      }
+    </ul>
+    } }
   </div>
 </div>
