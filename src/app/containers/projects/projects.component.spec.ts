@@ -74,8 +74,8 @@ describe('ProjectsComponent', () => {
 
     expect(spectator.component.isLoading()).toBeFalsy();
     expect(spectator.component.repositories()).toEqual([
-      { ...createTestRepository(1), languages: 'HTML' },
       { ...createTestRepository(portfolioRepositoryId), languages: 'HTML' },
+      { ...createTestRepository(1), languages: 'HTML' },
     ]);
 
     spectator.detectChanges();
