@@ -98,6 +98,11 @@ exports[`HomeComponent should match snapshot 1`] = `
                 src="carousel-images/css.svg"
               />
               <img
+                alt="Bootstrap logo"
+                height="40"
+                src="carousel-images/bootstrap.svg"
+              />
+              <img
                 alt="JavaScript logo"
                 height="40"
                 src="carousel-images/javascript.svg"
@@ -106,6 +111,11 @@ exports[`HomeComponent should match snapshot 1`] = `
                 alt="TypeScript logo"
                 height="40"
                 src="carousel-images/typescript.svg"
+              />
+              <img
+                alt="NodeJS logo"
+                height="40"
+                src="carousel-images/nodejs.svg"
               />
               <img
                 alt="Angular logo"
@@ -126,6 +136,16 @@ exports[`HomeComponent should match snapshot 1`] = `
                 alt="Python logo"
                 height="40"
                 src="carousel-images/python.svg"
+              />
+              <img
+                alt="GIT logo"
+                height="40"
+                src="carousel-images/git.svg"
+              />
+              <img
+                alt="Docker logo"
+                height="40"
+                src="carousel-images/docker.svg"
               />
             </div>
             <div
@@ -142,6 +162,11 @@ exports[`HomeComponent should match snapshot 1`] = `
                 src="carousel-images/css.svg"
               />
               <img
+                alt="Bootstrap logo"
+                height="40"
+                src="carousel-images/bootstrap.svg"
+              />
+              <img
                 alt="JavaScript logo"
                 height="40"
                 src="carousel-images/javascript.svg"
@@ -150,6 +175,11 @@ exports[`HomeComponent should match snapshot 1`] = `
                 alt="TypeScript logo"
                 height="40"
                 src="carousel-images/typescript.svg"
+              />
+              <img
+                alt="NodeJS logo"
+                height="40"
+                src="carousel-images/nodejs.svg"
               />
               <img
                 alt="Angular logo"
@@ -170,6 +200,16 @@ exports[`HomeComponent should match snapshot 1`] = `
                 alt="Python logo"
                 height="40"
                 src="carousel-images/python.svg"
+              />
+              <img
+                alt="GIT logo"
+                height="40"
+                src="carousel-images/git.svg"
+              />
+              <img
+                alt="Docker logo"
+                height="40"
+                src="carousel-images/docker.svg"
               />
             </div>
           </div>

@@ -76,15 +76,15 @@
 
   .carousel-track {
     white-space: nowrap;
-    animation: slide-carousel 40s linear infinite;
+    animation: slide-carousel 20s linear infinite;
 
     &:hover {
       animation-play-state: paused;
     }
 
     .carousel-items > img {
-      width: calc(100% / 8);
-      padding: 0 40px;
+      width: calc(100% / 12);
+      padding: 0 20px;
     }
   }
 }

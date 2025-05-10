@@ -19,6 +19,7 @@ describe('ProjectsComponent', () => {
 
   let portfolioHttpService: jest.Mocked<PortfolioHttpService>;
   let resolveFetchRepositories: (repositories: Repository[]) => void;
+  let fetchLanguagesResolvers: Array<(langs: Record<string, number>) => void> = [];
 
   const createComponent = createComponentFactory({
     component: ProjectsComponent,
@@ -33,6 +34,12 @@ describe('ProjectsComponent', () => {
           fetchRepositories: jest
             .fn()
             .mockImplementation(() => new Promise<Repository[]>(resolve => (resolveFetchRepositories = resolve))),
+          fetchRepositoryLanguages: jest.fn().mockImplementation(
+            () =>
+              new Promise<Record<string, number>>(resolve => {
+                fetchLanguagesResolvers.push(resolve);
+              })
+          ),
         },
       },
     ],
@@ -57,8 +64,19 @@ describe('ProjectsComponent', () => {
     resolveFetchRepositories(testRepositories);
     await Promise.resolve();
 
+    fetchLanguagesResolvers[0]({ HTML: 20 });
+    fetchLanguagesResolvers[1]({ HTML: 20 });
+
+    await Promise.resolve();
+    await Promise.resolve();
+    await Promise.resolve();
+    await Promise.resolve();
+
     expect(spectator.component.isLoading()).toBeFalsy();
-    expect(spectator.component.repositories()).toEqual(testRepositories);
+    expect(spectator.component.repositories()).toEqual([
+      { ...createTestRepository(1), languages: 'HTML' },
+      { ...createTestRepository(portfolioRepositoryId), languages: 'HTML' },
+    ]);
 
     spectator.detectChanges();
 

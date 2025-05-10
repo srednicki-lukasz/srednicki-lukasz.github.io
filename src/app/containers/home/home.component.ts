@@ -13,11 +13,15 @@ export class HomeComponent {
   readonly carouselItems = [
     { src: 'carousel-images/html.svg', alt: 'HTML logo' },
     { src: 'carousel-images/css.svg', alt: 'CSS logo' },
+    { src: 'carousel-images/bootstrap.svg', alt: 'Bootstrap logo' },
     { src: 'carousel-images/javascript.svg', alt: 'JavaScript logo' },
     { src: 'carousel-images/typescript.svg', alt: 'TypeScript logo' },
+    { src: 'carousel-images/nodejs.svg', alt: 'NodeJS logo' },
     { src: 'carousel-images/angular.svg', alt: 'Angular logo' },
     { src: 'carousel-images/ngrx.svg', alt: 'NgRx logo' },
     { src: 'carousel-images/rxjs.svg', alt: 'RxJS logo' },
     { src: 'carousel-images/python.svg', alt: 'Python logo' },
+    { src: 'carousel-images/git.svg', alt: 'GIT logo' },
+    { src: 'carousel-images/docker.svg', alt: 'Docker logo' },
   ];
 }

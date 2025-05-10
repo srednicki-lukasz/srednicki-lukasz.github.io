@@ -22,7 +22,7 @@
         @if (repository.id === portfolioRepositoryId) {
         <small class="accent">>_ {{ repository.description || '—' }}</small>
         } @else {
-        <small class="text-secondary">>_ {{ repository.description || '—' }} ({{ repository.languages }})</small>
+        <small class="text-secondary">{{ repository.description || '—' }} ({{ repository.languages }})</small>
         }
       </li>
       }
