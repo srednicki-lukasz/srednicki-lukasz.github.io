@@ -5,34 +5,62 @@ on:
     branches:
       - main
 
+concurrency:
+  group: 'pages-deploy'
+  cancel-in-progress: true
+
+permissions:
+  pages: write
+  contents: read
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
+
+      - name: Cache npm
+        uses: actions/cache@v4
         with:
-          fetch-depth: 0
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Install
+      - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build production bundle
         run: npm run build:prod
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Add SPA fallback
+        run: |
+          cp ./dist/portfolio/browser/index.html \
+             ./dist/portfolio/browser/404.html
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/portfolio/browser
-          publish_branch: gh-pages
-          keep_files: false
+          path: ./dist/portfolio/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
