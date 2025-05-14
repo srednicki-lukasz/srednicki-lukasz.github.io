@@ -1,32 +1,38 @@
 <div class="h-100 card rounded-0 rounded-start">
   <div class="card-body d-flex align-items-center justify-content-center p-0">
     @if (isLoading()) {
-    <div class="spinner-border text-light" role="status">
-      <span class="sr-only"></span>
-    </div>
-    } @else { @if (!repositories().length) {
-    <div class="h-100 w-100 d-flex align-items-center justify-content-center">Nothing to see here</div>
+      <div class="spinner-border text-light" role="status">
+        <span class="sr-only"></span>
+      </div>
     } @else {
-    <ul class="h-100 w-100 list-group">
-      @for (repository of repositories(); track $index) {
-      <li class="list-group-item list-group-item-action rounded-0 border-0 bg-transparent">
-        <div class="w-100 d-flex align-items-center justify-content-between">
-          <h5 class="m-0">
-            <small>{{ $index + 1 }}.</small>
-            {{ repository.name }}
-          </h5>
-          <a [href]="repository.html_url" target="_blank" class="ms-3" title="GitHub">
-            <span class="bi-github"></span>
-          </a>
-        </div>
-        @if (repository.id === portfolioRepositoryId) {
-        <small class="accent">>_ {{ repository.description || '—' }}</small>
-        } @else {
-        <small class="text-secondary">{{ repository.description || '—' }} ({{ repository.languages }})</small>
-        }
-      </li>
+      @if (!repositories().length) {
+        <div class="h-100 w-100 d-flex align-items-center justify-content-center">Nothing to see here</div>
+      } @else {
+        <ul class="h-100 w-100 list-group">
+          @for (repository of repositories(); track $index) {
+            <li class="list-group-item list-group-item-action rounded-0 border-0 bg-transparent">
+              <div class="w-100 d-flex align-items-center justify-content-between">
+                <h5 class="m-0">
+                  <small>{{ $index + 1 }}.</small>
+                  {{ repository.name }}
+                </h5>
+                <a [href]="repository.html_url" target="_blank" class="ms-3" title="GitHub">
+                  <span class="bi-github"></span>
+                </a>
+              </div>
+              @if (repository.id === portfolioRepositoryId) {
+                <small class="text-secondary"> {{ repository.languages }}</small
+                ><br />
+                <small class="accent">>_ {{ repository.description || '—' }}</small>
+              } @else {
+                <small class="text-secondary"> {{ repository.languages }}</small
+                ><br />
+                <small class="accent">{{ repository.description || '—' }}</small>
+              }
+            </li>
+          }
+        </ul>
       }
-    </ul>
-    } }
+    }
   </div>
 </div>

@@ -27,7 +27,9 @@ export class ProjectsComponent implements OnInit {
   private computeRepositories(store = this.store): (Repository & { languages: string })[] {
     return store.computedRepositories().map(computedRepository => ({
       ...computedRepository,
-      languages: Object.keys(computedRepository.languages).join(', '),
+      languages: Object.keys(computedRepository.languages)
+        .sort((a, b) => a.localeCompare(b))
+        .join(', '),
     }));
   }
 }

@@ -8,11 +8,7 @@ import { configRepositoryId, portfolioRepositoryId, PortfolioStore } from '../..
 import { createTestRepository } from '../../test/portfolio.test-data';
 import { ProjectsComponent } from './projects.component';
 
-const testRepositories = [
-  createTestRepository(1),
-  createTestRepository(configRepositoryId),
-  createTestRepository(portfolioRepositoryId),
-];
+const testRepositories = [createTestRepository(1), createTestRepository(configRepositoryId), createTestRepository(portfolioRepositoryId)];
 
 describe('ProjectsComponent', () => {
   let spectator: Spectator<ProjectsComponent>;
@@ -31,9 +27,7 @@ describe('ProjectsComponent', () => {
       {
         provide: PortfolioHttpService,
         useValue: {
-          fetchRepositories: jest
-            .fn()
-            .mockImplementation(() => new Promise<Repository[]>(resolve => (resolveFetchRepositories = resolve))),
+          fetchRepositories: jest.fn().mockImplementation(() => new Promise<Repository[]>(resolve => (resolveFetchRepositories = resolve))),
           fetchRepositoryLanguages: jest.fn().mockImplementation(
             () =>
               new Promise<Record<string, number>>(resolve => {

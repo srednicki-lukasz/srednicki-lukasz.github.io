@@ -33,8 +33,7 @@ export const createTestRepository = (id = 978832136): Repository => ({
   url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io',
   forks_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/forks',
   keys_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/keys{/key_id}',
-  collaborators_url:
-    'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/collaborators{/collaborator}',
+  collaborators_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/collaborators{/collaborator}',
   teams_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/teams',
   hooks_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/hooks',
   issue_events_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/issues/events{/number}',
@@ -55,8 +54,7 @@ export const createTestRepository = (id = 978832136): Repository => ({
   commits_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/commits{/sha}',
   git_commits_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/git/commits{/sha}',
   comments_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/comments{/number}',
-  issue_comment_url:
-    'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/issues/comments{/number}',
+  issue_comment_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/issues/comments{/number}',
   contents_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/contents/{+path}',
   compare_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/compare/{base}...{head}',
   merges_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/merges',
@@ -65,8 +63,7 @@ export const createTestRepository = (id = 978832136): Repository => ({
   issues_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/issues{/number}',
   pulls_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/pulls{/number}',
   milestones_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/milestones{/number}',
-  notifications_url:
-    'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/notifications{?since,all,participating}',
+  notifications_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/notifications{?since,all,participating}',
   labels_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/labels{/name}',
   releases_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/releases{/id}',
   deployments_url: 'https://api.github.com/repos/srednicki-lukasz/srednicki-lukasz.github.io/deployments',
